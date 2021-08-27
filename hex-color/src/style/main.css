@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  position: relative;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hex-colors{
+  padding: 1rem 0;
+  width: 50%;
+  text-align: center;
+}
+h1{
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.5;
+}
+h2{
+  margin-top: 10%;
+}
+h3{
+  margin-top: 5%;
+}
+h1, h2, h3, label{
+  animation: color-change 5s infinite alternate;
+}
+.btn{
+  margin-top: 2rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.btn:hover{
+  cursor: pointer;
+  background: #ccc;
+}
+
+.picker-group{
+  display: flex;
+  padding-bottom: 1rem;
+}
+input{
+  padding: 0;
+  width: 200%;
+  height: 200%;
+  cursor: pointer;
+  transform: translate(-25%, -25%)
+}
+.input-container{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+@keyframes color-change{
+  0% {
+    color: #ffffff;
+}
+20% {
+    color: #cccccc;
+}
+40% {
+    color: #999999;
+}
+60% {
+    color: #666666;
+}
+80% {
+    color: #333333;
+}
+100% {
+    color: #000000;
+}
+}
+
+@keyframes color-change {
+  0% {
+    color: #ffffff;
+}
+20% {
+    color: #cccccc;
+}
+40% {
+    color: #999999;
+}
+60% {
+    color: #666666;
+}
+80% {
+    color: #333333;
+}
+100% {
+    color: #ffffff;
+}
+}
