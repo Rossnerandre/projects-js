@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <span class="clock"></span>
+      <button class="btn" onclick="openAlarm()">Alarm</button>
+      <div class="alarm-time"></div>
+      <div class="set-alarm">
+        <input type="number" list="hour" id="hours" min="0" max="24">
+        <datalist id="hour">
+        </datalist>
+        <input type="number" list="min" id="mins">
+        <datalist id="min">
+        </datalist>
+        <div>
+          <button class="btn" onclick="setAlarm()">Set Alarm</button>
+          <button class="btn-close" onclick="closeAlarm()">x</button>
+        </div>
+        <audio src="alert.wav" id="audio" controls
+          style="display: none;"></audio>
+      </div>
+      <div class="modal">
+        <button class="btn-disable" onclick="disableAlarm()">Alarm
+          Off</button>
+      </div>
+
+    </div>
+  </main>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
