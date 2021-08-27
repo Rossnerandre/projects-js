@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Chuck Norris Facts</title>
+  <link rel="stylesheet" href="./src/style/main.css">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <main class="container">
+    <div class="box-facts">
+      <i class="fas fa-quote-left fa-4x"></i>
+      <span id="fact"></span>
+      <i class="fas fa-quote-right fa-4x"></i>
+    </div>
+    <button class="btn" onclick="fetchRandom()">Random Chuck Norris
+      Facts</button>
+    <div class="loading">
+      <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+  </main>
+  <script src="./src/js/main.js"></script>
+</body>
+
+</html>
