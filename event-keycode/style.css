@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.light-theme {
+  --background: #ddd;
+  --text-shadow: rgba(0, 0, 0, 0.3);
+  --color: #000;
+  --primary-color: #b9e9ff;
+  --bg-card: #fff;
+  --bg-info: rgba(255, 255, 255, 0.8);
+  --button: #0091d4;
+
+}
+.dark-theme{
+  --background: #333;
+  --text-shadow: rgba(0, 0, 0, 0.3);
+  --color: #f4f4f4;
+  --primary-color: #5b60ff;
+  --bg-card: #555;
+  --bg-info: #555;
+  --button: var(--primary-color);
+}
+
+body{
+  background-color: var(--background);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.btn{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  border: 3px solid var(--button);
+  padding: .75rem 1rem;
+  background: transparent;
+  color: var(--button);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  transform: translateY(-5px);
+  transition: all .3s ease-in-out;
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.3);
+}
+
+.container  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+}
+
+.container h1{
+  font-size: 20rem;
+  font-weight: 500;
+  text-shadow: 12px 4px 7px var(--text-shadow);
+}
+
+.info {
+  display: none;
+  background: var(--bg-info);
+  padding: 1rem 2rem;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.info.active {
+  display: inline-block;
+}
+
+.cards{
+  display: none;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cards.active{
+  display: flex;
+}
+
+.card{
+  margin: 18px;
+  text-align: center;
+  width: 22%;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3)
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  transition: all .3s ease-in-out;
+  box-shadow: 5px 20px 25px  rgba(0, 0, 0, 0.5);
+}
+
+.card-header{
+  background-color: var(--primary-color);
+  border-radius: 4px 4px 0 0;
+  padding: 3px;
+  font-size: 14px;
+}
+
+.card-main{
+  background-color: var(--bg-card);
+  padding: 1.2rem 0;
+  font-size: 22px;
+  border-radius: 0 0 4px 4px;
+}
+
+@media (max-width: 1280px) {
+  .card{
+    width: 45%;
+  }
+}
+@media (max-width: 720px) {
+  .card{
+    width: 44%;
+  }
+}
+
+@media (max-width: 598px) {
+  .card{
+    width: 43%;
+  }
+}
+@media (max-width: 515px) {
+  .card{
+    width: 90%;
+  }
+  .container h1{
+    font-size: 8rem;
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event KeyCode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-theme">
+  <button class="btn" id="theme">Dark theme</button>
+  <div class="container">
+    <div class="info active">
+      <p>Press any key to get the JavaScript event keycode</p>
+    </div>
+    <h1 id="keyCode"></h1>
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">event.key</div>
+        <div class="card-main"><span id="key"></span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">event.code</div>
+        <div class="card-main"><span id="code"></span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">event.keyCode</div>
+        <div class="card-main"><span id="keyCodeCard"></span></div>
+      </div>
+      <div class="card">
+        <div class="card-header">event.location</div>
+        <div class="card-main"><span id="location"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
