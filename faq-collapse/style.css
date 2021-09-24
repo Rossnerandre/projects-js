@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  background-color: #e0e0e0;
+}
+
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem .5rem;
+}
+
+.faq {
+  border: 1px solid;
+  background-color: #e0e0e0;
+  position: relative;
+  padding: 1rem 4rem 1rem 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  transition: background-color .3s ease-in-out;
+}
+
+.faq .text {
+  transition: margin 0.3s ease-in;
+  height: 0;
+  opacity: 0;
+}
+
+.faq .title{
+  color: #333;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: -7px -7px 10px #5a5a5a,
+  4px 4px 10px #ffffff;
+}
+
+.faq.active .text{
+  margin: 1rem 0 0 0;
+  height: auto;
+  opacity: 1;
+}
+
+.btn-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+.faq.active .btn-toggle{
+  transform: rotate(180deg);
+}
+
+@media (max-width: 600px) {
+  .btn-toggle {
+    font-size: 1rem;
+  }
+
+}
