@@ -22,14 +22,6 @@
   --black-main: #333;
   --black-dark: #111;
 }
-/*
-Dividir e complementar adobe cor base = #FF7A18
-#FF290A
-#30FF9D
-#FF7A18
-#FFB724
-#3081FF
-*/
 
 /* Reset */
 *,
@@ -60,26 +52,31 @@ html, body{
   margin: 0 auto;
   padding: 0 0.75rem;
 }
+
 @media (min-width: 576px) {
 .container {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
 }
+
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
@@ -107,16 +104,17 @@ html, body{
   align-items: center;
 }
 
-
 /* BG Colors */
 .bg-dark-light{
   background-color: var(--black-light);
   color: #fff;
 }
+
 .bg-dark-main{
   background-color: var(--black-main);
   color: #fff;
 }
+
 .bg-dark{
   background-color: var(--black-dark);
   color: #fff;
@@ -230,11 +228,13 @@ html, body{
   width: 100%;
   height: 90vh;
 }
+
 @media screen and (max-width: 892px) {
   .banner{
-    height: 60vh;
+    height: 80vh;
   }
 }
+
 .banner .container{
   height: 100%;
 }
@@ -265,6 +265,7 @@ html, body{
   cursor: pointer;
   border-radius: 7px;
 }
+
 .banner .container .btn-banner:hover,
 .banner .container .btn-banner:focus,
 .banner .container .btn-banner:active{
@@ -297,11 +298,13 @@ html, body{
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (max-width: 992px) {
   #projects .cards{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   #projects .cards{
     grid-template-columns: repeat(2, 1fr);
@@ -439,7 +442,6 @@ html, body{
   background-color: rgba(0,0,0,0.8);
 }
 
-
 /* About */
 .about {
   margin: 7rem auto;
@@ -448,11 +450,13 @@ html, body{
   box-shadow: 5px 5px 3px 3px #777;
   width: 50%;
 }
+
 @media (max-width: 1600px) {
   .about {
     width: 70%;
   }
 }
+
 @media (max-width: 1200px) {
   .about {
     flex-direction: column;
@@ -483,7 +487,6 @@ html, body{
   }
 }
 
-
 .about .me {
   width: 40%;
   display: flex;
@@ -510,9 +513,11 @@ html, body{
   font-size: 1.2rem;
   color: #fff;
 }
+
 .about .text a:hover {
   color: var(--orange-color);
 }
+
 .about .text a .fa-github {
   margin-right: 5px;
 }
@@ -521,6 +526,7 @@ html, body{
 .footer{
   padding: 4rem 0;
 }
+
 .footer p {
   font-size: 1.3rem;
 }
@@ -542,6 +548,7 @@ html, body{
 .social li a {
   color: #fff;
 }
+
 .social li a:hover {
   color: var(--orange-color);
 }
