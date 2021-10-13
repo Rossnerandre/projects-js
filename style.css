@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
 
+/*
+  1 - Variables
+  2 - Resets
+  3 - Positions
+  4 - Containers
+  5 - Flex
+  6 - BG Colors
+  7 - Navbar
+  8 - Banner
+  9 - Projects
+  10 - About
+  11 - Footer
+*/
+
 /* Variables */
 :root{
   --orange-color:#ff7a18;
@@ -31,6 +45,13 @@ html, body{
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden !important;
   height: 100%;
+  scroll-behavior: smooth
+}
+
+/* Position */
+.position-fixed {
+  position: fixed;
+  z-index: 100;
 }
 
 /* Container */
@@ -207,7 +228,7 @@ html, body{
 .banner {
   background: url('./banner.jpg') center center/cover no-repeat;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 @media screen and (max-width: 892px) {
   .banner{
@@ -235,6 +256,7 @@ html, body{
 }
 
 .banner .container .btn-banner{
+  text-decoration: none;
   color: #fff;
   font-size: 1.4rem;
   background-color: var(--orange-color);
@@ -302,7 +324,7 @@ html, body{
   background-color: var(--orange-color);
 }
 
-#projects .cards .card:nth-child(even):after {
+#projects .cards .card:after {
   content: '';
   position: absolute;
   display: block;
@@ -316,21 +338,11 @@ html, body{
   transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-#projects .cards .card:nth-child(even):hover::after {transform: scale(2) translateX(0) translateY(0) rotate(-32deg); }
-
-#projects .cards .card:nth-child(odd):after {
-  content: '';
-  position: absolute;
-  display: block;
-  background: inherit;
-  opacity: 0.9;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+#projects .cards .card:nth-child(odd):after{
   transform: scale(2) translateX(75%) translateY(75%) rotate(-32deg);
-  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
 }
+
+#projects .cards .card:nth-child(even):hover::after {transform: scale(2) translateX(0) translateY(0) rotate(-32deg); }
 
 #projects .cards .card:nth-child(odd):hover:after {transform: scale(2) translateX(0) translateY(0) rotate(-32deg); }
 
@@ -339,17 +351,16 @@ html, body{
 }
 
 #projects .cards .card-img{
-  /* height: auto; */
   transform: translateZ(0);
-  /* display: block; */
   transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
 }
+
 #projects .cards .card-img::before {
   content: '';
   display: block;
   padding-top: 75%;
-  /* overflow: hidden; */
 }
+
 #projects .cards .card-img img {
   position: absolute;
   top: 0;
@@ -389,9 +400,13 @@ html, body{
   z-index: 1;
   opacity: 0;
   color: #fff;
-  transform: translateY(-20%);
+  transform: translateY(20%);
   transition: opacity .5s cubic-bezier(0.2, 1, 0.3, 1), transform .5s cubic-bezier(0.2, 1, 0.3, 1);
   transition-delay: 300ms;
+}
+
+#projects .cards .card:nth-child(even) .card-text{
+  transform: translateY(-20%);
 }
 
 #projects .cards .card:hover .card-text {
@@ -425,9 +440,85 @@ html, body{
 }
 
 
+/* About */
+.about {
+  margin: 7rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px 3px #777;
+  width: 50%;
+}
+@media (max-width: 1600px) {
+  .about {
+    width: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .me {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+  .about .text {
+
+    height: 200px;
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about{
+    width: 90%;
+    padding: 3rem 1rem;
+  }
+  .about .me .meimg {
+    width: 50%;
+  }
+  .about .text p{
+    margin: 1rem 0;
+  }
+}
+
+
+.about .me {
+  width: 40%;
+  display: flex;
+}
+
+.about .me .meimg  {
+  margin: 0 auto;
+
+}
+
+.about .text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.about .text p {
+  text-align: justify;
+}
+
+.about .text a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.about .text a:hover {
+  color: var(--orange-color);
+}
+.about .text a .fa-github {
+  margin-right: 5px;
+}
+
 /* Footer */
 .footer{
-  margin-top: 10rem;
   padding: 4rem 0;
 }
 .footer p {
