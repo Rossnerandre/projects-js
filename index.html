@@ -12,7 +12,8 @@
 </head>
 
 <body>
-  <header class="container-fluid bg-dark-main">
+
+  <div class="container-fluid bg-dark position-fixed">
     <div class="container">
       <nav class="navbar d-flex justify-content-between align-items-center">
         <h2>André Rossner</h2>
@@ -20,35 +21,53 @@
         <div class="links">
           <ul class="d-flex">
             <li class="nav-item">
-              <a class="link-item" href="#">Home</a>
+              <a class="link-item" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="link-item" href="#">Projects</a>
+              <a class="link-item" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="link-item" href="#">About</a>
+              <a class="link-item" href="#about">About</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
+  </div>
+
+  <header id="home" class="banner">
+    <div
+      class="container d-flex justify-content-center align-items-center flex-column">
+      <h1 class="banner-title">Projects simples</h1>
+      <p class="banner-text">Some projects no framework, with HTLM5, CSS3 and
+        JS</p>
+      <a href="#projects" class="btn-banner">Enjoy</a>
+    </div>
+
   </header>
   <main>
-    <div class="banner">
-      <div
-        class="container d-flex justify-content-center align-items-center flex-column">
-        <h1 class="banner-title">Projects simples</h1>
-        <p class="banner-text">Some projects no framework, with HTLM5, CSS3 and
-          JS</p>
-        <btn class="btn-banner">Enjoy</btn>
-      </div>
-    </div>
     <section id="projects">
     </section>
 
+    <div id="about" class="container-fluid">
+      <div class="about d-flex bg-dark">
+        <div class="me">
+          <img src="/mebear.png" alt="" class="meimg">
+        </div>
+        <div class="text">
+          <h2>About this projects</h2>
+          <p>
+            Hi, I'm a web developer, and I made these projects, and I will do
+            more. Many projects were based on the designs of Brad Traversy.
+          </p>
+          <a href="https://github.com/Rossnerandre/projects-js">
+            <i class="fab fa-github"></i>If you want see the code
+          </a>
+        </div>
 
+      </div>
 
-
+    </div>
   </main>
   <footer>
     <div class="container-fluid bg-dark ">
