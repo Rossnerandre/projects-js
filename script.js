@@ -35,6 +35,7 @@ const myProjects = [
   { projectName: 'Faq Collapse', projectPath: 'faq-collapse' },
   { projectName: 'Incrementing Counter', projectPath: 'incrementing-counter' },
   { projectName: 'Random Choice Picker', projectPath: 'random-choice-picker' },
+  { projectName: 'Drink Water', projectPath: 'drink-water' },
 ]
 
 const cards = document.createElement('div');
